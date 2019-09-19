@@ -5,7 +5,7 @@ var parser = require( "../lib/parser" ),
     program = require( "commander" );
 
 program
-  .version( "0.0.1" )
+  .version( "2018-04-13" )
   .usage( "[options] <file...>" )
   .option( "-s, --silent", "don't print errors messages" )
   .parse( process.argv );
