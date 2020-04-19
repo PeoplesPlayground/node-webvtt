@@ -27,8 +27,8 @@ if (program.content) {
             failed = true;
             error = errors[i];
             if (!program.silent) {
-                // sourcefile:lineno.column: message
-                console.log("%s.%s: %s", error.line, error.col | 0, error.message);
+                // sourcefile:lineno.column: message || content
+                console.log("%s.%s: %s || %s", error.line, error.col | 0, error.message, error.content);
             }
         }
 
@@ -79,8 +79,8 @@ if (program.content) {
             failed = true;
             error = errors[i];
             if (!program.silent) {
-                // sourcefile:lineno.column: message
-                console.log("%s:%s.%s: %s", filename, error.line, error.col | 0, error.message);
+                // sourcefile:lineno.column: message || content
+                console.log("%s.%s: %s || %s", error.line, error.col | 0, error.message, error.content);
             }
         }
     });
